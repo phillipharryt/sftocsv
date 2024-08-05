@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools >= 61.0",]
+build-backend = "setuptools.build_meta"
+
+[project]
+dynamic = ["version"]
+name="sftocsv"
+requires-python = ">=3.8"
+authors = [
+    {name = "Phillip Harry T", email = "philliptinsley44@gmail.com"}
+]
+description = "Salesforce queries made easy"
+readme = "README.md"
+license = { file = "LICENSE" }
+classifiers = [
+    "License :: Other/Proprietary License",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Information Technology", 
+]
+keywords = ["Salesforce", "SF", "saleforce", "SQL", "SOQL",
+    "sql", "soql", "query", "query language", "csv", "CSV",
+    "REST API", "Rest", "connected app"]
+
+[tool.setuptools.dynamic]
+version = {attr = "sftocsv.__version__"}
+
+[project.scripts]

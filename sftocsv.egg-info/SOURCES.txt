@@ -1,0 +1,13 @@
+LICENSE
+README.md
+pyproject.toml
+setup.py
+sftocsv/__init__.py
+sftocsv/sftocsv.py
+sftocsv/utils.py
+sftocsv.egg-info/PKG-INFO
+sftocsv.egg-info/SOURCES.txt
+sftocsv.egg-info/dependency_links.txt
+sftocsv.egg-info/top_level.txt
+tests/test_sftocsv.py
+tests/test_utils.py
