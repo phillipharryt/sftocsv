@@ -1,2 +1,6 @@
 __pycache__
 coverage.xml
+.coverage
+.vscode/settings.json
+dist/*
+sftocsv.egg-info/

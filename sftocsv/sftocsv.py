@@ -131,7 +131,7 @@ class Sftocsv:
         if(type(records) == list):
             utils.record_list_to_csv(record_list=records, output_filename=output_filename, append=append)
         elif(type(records) == dict):
-            utils.record_list_dict_to_csv(record_list_dict=records, output_filename=output_filename, append=append)
+            utils.record_list_dict_to_csv(record_list_dict=records, filename_prefix=output_filename, append=append)
 
     
     @staticmethod

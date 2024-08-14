@@ -109,8 +109,8 @@ class test_utils(TestCase):
 
     
     ### --- collect_token tests
-    @patch('sftocsv.utils.utils.get_access_token')
-    @patch('sftocsv.utils.utils.check_token_store')
+    @patch.object(utils, 'get_access_token')
+    @patch.object(utils, 'check_token_store')
     def test_collect_token_none_check_token(self, mock_check_token_store, mock_get_access_token):
         """
         #### Function: 
@@ -130,7 +130,7 @@ class test_utils(TestCase):
         mock_get_access_token.return_value = 'access_token'
         assert(utils.collect_token(base_url='https://localhost/', c_key='test key', c_secret='test secret') == 'access_token')
 
-    @patch('sftocsv.utils.utils.check_token_store')
+    @patch.object(utils, 'check_token_store')
     def test_collect_token_check_token_returned(self, mock_check_token_store):
         """
         #### Function:
