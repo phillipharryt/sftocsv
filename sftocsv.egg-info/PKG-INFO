@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: sftocsv
-Version: 1.0
+Version: 1.0.2
 Summary: Salesforce queries made easy
 Author-email: Phillip Harry T <philliptinsley44@gmail.com>
 License: Apache NON-AI License, Version 2.0
@@ -142,7 +142,7 @@ Requires-Python: >=3.8
 Description-Content-Type: text/markdown
 License-File: LICENSE
 
-#Sftocsv
+## Sftocsv
 
 ## Salesforce queries made easy
 
@@ -299,14 +299,14 @@ If you set *preserve_inner_key* to True then the list not specified as the *side
 
 ## 1. Creating Connected App
 ### 1.1 Go to App Manager  
-![Go to App Manager](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/1.png?raw=true)
+![Go to App Manager](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/1.png?raw=true)
 ### 1.2 Create a New Connected App  
-![Click 'New Connect App'](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/2.png?raw=true)  
+![Click 'New Connect App'](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/2.png?raw=true)  
 Name it as you wish, for this I'm naming mine Sftocsv, nothing non-mandatory is required in this section.  
-![Name your app](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/3.png?raw=true)
+![Name your app](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/3.png?raw=true)
 ### 1.3 Adjust Connected App Settings
 Make them match the details in this screenshot.  
-![Adjust your settings](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/4.png?raw=true)  
+![Adjust your settings](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/4.png?raw=true)  
 Enabling OAuth settings will expand the section once ticked.  
 The callback url I use is ```https://login.salesforce.com/services/oauth2/success```  
 Making sure 'Enable Client Credentials Flow' is ticked and all the OAuth scopes are selected as shown.  
@@ -316,30 +316,30 @@ Now we're going to create an API only user. This is the safest way of granting a
 ### 2.1 Creating the profile.
 Create a profile, I've named my API ONLY. The important settings to enable are in the __Administrative Permission__ section, 
 tick API Enabled and API Only User.  
-![Profile Settings](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/5.png?raw=true) (check this)
+![Profile Settings](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/5.png?raw=true) (check this)
 ### 2.2 Create a user.
 Ensure they at least have a Salesforce licence and give them the profile you've just created.   
 Optionally this can be done through a permission set, under System Permissions ticking the same values and assigning the permission set to your API ONLY user.   
-![Optional permission set](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/6.png?raw=true)
+![Optional permission set](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/6.png?raw=true)
 ## 3. Finishing Connected App 
 ### 3.1 Set Client Credentials Flow 'Run As' user: 
 Go back to the app manager
 Click 'Manage' on the dropdown  
 Set the Client Credentials flow 'Run As' user at the bottom of the page to your API User  
-![Change 'Run As' to API User](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/7.png?raw=true)
+![Change 'Run As' to API User](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/7.png?raw=true)
 ### 3.2 Get Consumer Details
 Go back to app manager  
 Click 'View' on the dropdown and then click 'Manage Consumer Details'.   
-![Manage Consumer Details](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/8.png?raw=true)  
+![Manage Consumer Details](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/8.png?raw=true)  
 After authenticating you will be provided a screen with Consumer Key and Consumer Secret, these are the details required for your login.  
-![Consumer Details](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/9.png?raw=true)  
+![Consumer Details](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/9.png?raw=true)  
 The other details you'll need are your api version and your base url. Open up your dev console and run this anonyous apex 
 ```
 String baseUrl = URL.getOrgDomainUrl().toExternalForm();
 system.debug(baseUrl);
 ```
 This will debug the base url string, and in the logs will show you'll see your api version as well. 
-![Api version](https://github.com/phillipharryt/sftocsv/blob/main/sftocsvpics/10.png?raw=true) 
+![Api version](https://github.com/phillipharryt/sftocsv/blob/main/.sftocsvpics/10.png?raw=true) 
 
 --- 
 From this point it's assumed you either have an __access_token__ or a __consumer_key__,__consumer secret__,__base_url__, and __api_version__. You're ready to go back to [here](#installation)

@@ -354,7 +354,7 @@ class utils:
         """
         for key, value in record_list_dict.items():
             filename = f'{filename_prefix}_{key}.csv'
-            utils.record_list_to_csv(records_list=value, output_filename=filename, append=append)   
+            utils.record_list_to_csv(record_list=value, output_filename=filename, append=append)   
 
 
     @staticmethod
