@@ -325,9 +325,7 @@ class utils:
                     records.append(row)
 
         records.extend(record_list)
-        print(records)
         fieldnames = utils.build_key_list(records)
-        print(f'fieldnames = {fieldnames}')
         with open(f'{output_filename}.csv', 'w') as f:
             w = csv.DictWriter(f, fieldnames)
             w.writeheader()

@@ -126,7 +126,6 @@ class Sftocsv:
         Each record will be saved as a row in the csv output
         Each unique key will become a header in the csv
         """
-        print(type(records))
         output_filename = output_filename.rpartition('.csv')[0]
         if(type(records) == list):
             utils.record_list_to_csv(record_list=records, output_filename=output_filename, append=append)
